@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="QRCode.ScanQR"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QRCode"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="500">
+    <Grid>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Margin="10" Text="Sacn QR" FontSize="29" FontFamily="Mistral" Foreground="#BF1A33"></TextBlock>
+            <Image Margin="10" Width="150" Height="150" x:Name="imgQR"></Image>
+            <TextBlock Height="30" Margin="20 10" FontSize="16" x:Name="txtQR" materialDesign:HintAssist.Hint="Enter Text Here"></TextBlock>
+            <Button Margin="10" HorizontalAlignment="Center" x:Name="btnScanQR" Click="btnScanQR_Click" Height="50" Background="#BF1A33" BorderBrush="#BF1A33" materialDesign:ButtonAssist.CornerRadius="25">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Qrcode" Margin="0 0 5 0" Width="25" Height="25" />
+                    <TextBlock FontSize="16" Text="Scan QR"></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
