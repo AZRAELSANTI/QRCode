@@ -30,7 +30,7 @@ namespace QRCode
         {
             InitializeComponent();
         }
-
+        //просматривает текст qr кода
         private void btnScanQR_Click(object sender, RoutedEventArgs e)
         {
             if(openFileDialog.ShowDialog() == true)

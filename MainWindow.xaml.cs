@@ -24,12 +24,12 @@ namespace QRCode
         {
             InitializeComponent();
         }
-
+        //позволяет двигать приложение по экрану
         private void DragGrid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
-
+        //выбор между сканированием и созданием
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = ListViewMenu.SelectedIndex;
@@ -51,12 +51,12 @@ namespace QRCode
             TransitionContentSlide.OnApplyTemplate();
             TransitionGrid.Margin = new Thickness(0, ((index * 60) + 70), 0, 0);
         }
-
+        //закрывает приложение
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
-
+        //удаляет всё из грида, затем отображает крейт кью ар
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             GridContent.Children.Clear();
